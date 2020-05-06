@@ -2,6 +2,6 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-body {
+body.ember-application {
   background-color: #252f3f;
 }
