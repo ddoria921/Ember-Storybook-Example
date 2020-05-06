@@ -24,6 +24,13 @@ You will need the following things properly installed on your computer.
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
+## Running Storyook in Development
+
+> Note: you need the `.storybook/preview-head.html` file this to work. This file is auto generated when you run `ember serve`. If this is your first time running storybook you'll need to startup an ember server first, wait until the file is auto generated on startup, then stop the server and then you'll be able to use the command below. See https://github.com/storybookjs/ember-cli-storybook#preview-head-generation-race-condition for more info.
+
+* `npm run storybook`
+
+
 ### Code Generators
 
 Make use of the many generators for code, try `ember help generate` for more details
