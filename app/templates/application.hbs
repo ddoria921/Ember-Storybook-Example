@@ -1,5 +1,16 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<div class="flex justify-center items-center h-screen">
+  <Card>
+    <LoginForm
+      @onSuccess={{fn (mut this.showSuccess) true}}
+      @onError={{fn (mut this.showError) true}}
+    />
+  </Card>
+</div>
 
-{{outlet}}
+<div class="fixed inset-x-0 bottom-0 mx-4 mb-4">
+  {{#if this.showSuccess}}
+    <Alert @heading="Success!"/>
+  {{else if this.showError}}
+    <Alert @type="danger" @heading="Username or password do not match our records."/>
+  {{/if}}
+</div>
