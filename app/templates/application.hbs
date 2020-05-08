@@ -11,6 +11,9 @@
   {{#if this.showSuccess}}
     <Alert @heading="Success!"/>
   {{else if this.showError}}
-    <Alert @type="danger" @heading="Username or password do not match our records."/>
+    <Alert
+      @type="danger"
+      @heading="Username or password do not match our records."
+    />
   {{/if}}
 </div>
