@@ -1,5 +1,5 @@
 {
   "javascript.implicitProjectConfig.experimentalDecorators": true,
-  "editor.minimap.enabled": false,
-  "zenMode.centerLayout": false
+  "zenMode.centerLayout": false,
+  "editor.minimap.enabled": false
 }
