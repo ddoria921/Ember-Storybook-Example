@@ -27,7 +27,7 @@ export const errorState = () => ({
   template: hbs`
     <XInput
       placeholder="username"
-      @value={{this.email}}
+      @value={{this.username}}
       @label="Username (8 character max)"
       @isError={{this.isError}}
       @errorMessage="Username can't be longer than 8 characters"
@@ -35,10 +35,10 @@ export const errorState = () => ({
     />
   `,
   context: {
-    email: '',
+    username: '',
     onChange(value) {
       set(this, 'isError', value.length > 8);
-      this.set('email', value);
+      this.set('username', value);
     }
   }
 })
