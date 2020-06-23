@@ -1,5 +1,5 @@
 import { hbs } from 'ember-cli-htmlbars'
-import { set } from '@ember/object'
+import { action } from '@ember/object'
 
 export default {
   title: 'Input'
@@ -7,38 +7,38 @@ export default {
 
 export const Default = () => ({
   template: hbs`
-    <XInput
+    <UI::Input
       placeholder="name@mail.com"
       @value={{this.email}}
       @label="Email"
       @type="email"
-      @onChange={{action this.onChange}}
+      @onChange={{this.onChange}}
     />
   `,
   context: {
     email: '',
-    onChange(value) {
-      set(this, 'email', value);
-    }
+    onChange: action(function(value) {
+      this.set('email', value);
+    })
   }
 });
 
 export const errorState = () => ({
   template: hbs`
-    <XInput
+    <UI::Input
       placeholder="username"
       @value={{this.username}}
       @label="Username (8 character max)"
       @isError={{this.isError}}
       @errorMessage="Username can't be longer than 8 characters"
-      @onChange={{action this.onChange}}
+      @onChange={{this.onChange}}
     />
   `,
   context: {
     username: '',
-    onChange(value) {
-      set(this, 'isError', value.length > 8);
+    onChange: action(function(value) {
+      this.set('isError', value.length > 8);
       this.set('username', value);
-    }
+    })
   }
 })
