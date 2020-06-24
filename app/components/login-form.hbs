@@ -1,6 +1,6 @@
 <form ...attributes {{on "submit" this.handleSubmit}}>
   <div class="mb-4">
-    <XInput
+    <UI::Input
       @id="username"
       @label="Username"
       @type="email"
@@ -10,7 +10,7 @@
     />
   </div>
   <div class="mb-6">
-    <XInput
+    <UI::Input
       @id="password"
       @label="Password"
       @type="password"
@@ -20,7 +20,11 @@
     />
   </div>
   <div class="flex items-center justify-between">
-    <Button @type="submit">Sign In</Button>
-    <LinkButton @href="#">Forgot Password?</LinkButton>
+    <Button @type="submit">
+      Sign In
+    </Button>
+    <LinkButton @href="#">
+      Forgot Password?
+    </LinkButton>
   </div>
 </form>

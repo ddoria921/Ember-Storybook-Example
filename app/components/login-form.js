@@ -18,7 +18,7 @@ export default class LoginFormComponent extends Component {
   }
 
   @action
-  updateProperty(prop, event) {
-    this[prop] = event.target.value;
+  updateProperty(prop, value) {
+    this[prop] = value;
   }
 }
