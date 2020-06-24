@@ -1,9 +1,9 @@
-import { hbs } from 'ember-cli-htmlbars'
-import { action } from '@ember/object'
+import { hbs } from 'ember-cli-htmlbars';
+import { action } from '@ember/object;';
 
 export default {
-  title: 'Input'
-}
+  title: 'Input',
+};
 
 export const Default = () => ({
   template: hbs`
@@ -17,10 +17,10 @@ export const Default = () => ({
   `,
   context: {
     email: '',
-    onChange: action(function(value) {
+    onChange: action(function (value) {
       this.set('email', value);
-    })
-  }
+    }),
+  },
 });
 
 export const errorState = () => ({
@@ -36,9 +36,9 @@ export const errorState = () => ({
   `,
   context: {
     username: '',
-    onChange: action(function(value) {
+    onChange: action(function (value) {
       this.set('isError', value.length > 8);
       this.set('username', value);
-    })
-  }
-})
+    }),
+  },
+});
