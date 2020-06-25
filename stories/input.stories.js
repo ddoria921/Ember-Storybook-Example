@@ -1,5 +1,5 @@
 import { hbs } from 'ember-cli-htmlbars';
-import { action } from '@ember/object;';
+import { action } from '@ember/object';
 
 export default {
   title: 'Input',
