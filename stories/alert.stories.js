@@ -1,10 +1,8 @@
 import { hbs } from 'ember-cli-htmlbars';
 
-// <Alert @heading="Hello world" @body="More information" @type="info"/>
-
 export default {
-  title: 'Alert'
-}
+  title: 'Alert',
+};
 
 export const Default = () =>
   hbs`
