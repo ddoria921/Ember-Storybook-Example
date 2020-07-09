@@ -1,26 +1,30 @@
 <form ...attributes {{on "submit" this.handleSubmit}}>
   <div class="mb-4">
-    <Input
+    <UI::Input
       @id="username"
       @label="Username"
       @type="email"
       placeholder="john@mail.com"
       required
-      {{on "input" (fn this.updateProperty "username")}}
+      @onChange={{fn this.updateProperty "username"}}
     />
   </div>
   <div class="mb-6">
-    <Input
+    <UI::Input
       @id="password"
       @label="Password"
       @type="password"
       placeholder="********"
       required
-      {{on "input" (fn this.updateProperty "password")}}
+      @onChange={{fn this.updateProperty "password"}}
     />
   </div>
   <div class="flex items-center justify-between">
-    <Button @type="submit">Sign In</Button>
-    <LinkButton @href="#">Forgot Password?</LinkButton>
+    <Button @type="submit">
+      Sign In
+    </Button>
+    <LinkButton @href="#">
+      Forgot Password?
+    </LinkButton>
   </div>
 </form>
