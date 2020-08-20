@@ -3,5 +3,6 @@
   "zenMode.centerLayout": false,
   "editor.minimap.enabled": false,
   "editor.formatOnSave": true,
-  "html.format.indentHandlebars": true
+  "html.format.indentHandlebars": true,
+  "editor.cursorSmoothCaretAnimation": false
 }
