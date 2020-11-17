@@ -19,7 +19,8 @@
     "test": "npm-run-all lint:* test:*",
     "test:ember": "ember test",
     "storybook": "start-storybook -p 6006 -s dist",
-    "build-storybook": "build-storybook -s dist"
+    "build-storybook": "ember build && build-storybook -s dist",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
@@ -34,6 +35,7 @@
     "@storybook/addons": "^5.3.18",
     "@storybook/ember": "^5.3.18",
     "@storybook/ember-cli-storybook": "^0.2.1",
+    "@storybook/storybook-deployer": "^2.8.7",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "broccoli-asset-rev": "^3.0.0",
