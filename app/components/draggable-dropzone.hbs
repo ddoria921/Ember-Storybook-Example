@@ -1,0 +1,9 @@
+<div
+  ...attributes
+  {{on "dragenter" this.dragEnter}}
+  {{on "dragover" this.dragOver}}
+  {{on "drop" this.drop}}
+  {{on "dragleave" this.dragLeave}}
+>
+  {{yield this.isDraggedOver}}
+</div>
