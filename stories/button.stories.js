@@ -39,3 +39,12 @@ export const Themes = () => ({
   `,
   context: {}
 });
+
+export const Test = () => ({
+  template: hbs`
+    <Button>
+      Hello World
+    </Button>
+  `,
+  context: {}
+});
