@@ -22,7 +22,7 @@ export const Default = () => ({
 export const Disabled = () => ({
   template: hbs`
     <Button @disabled={{true}}>
-      Click me!
+      Hello world, Click me!
     </Button>
   `,
   context: {}
